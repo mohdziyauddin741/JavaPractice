@@ -151,7 +151,7 @@ public class CodeArray {
 			}
 		}
 
-		int[] result_2 = new int[p];
+		int[] result_2 = new int[p + 1];
 		for(int elt : result) {
 			if(m == p + 1) {
 				break;
