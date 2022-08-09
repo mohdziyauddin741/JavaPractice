@@ -1,9 +1,12 @@
 package arrays;
 
+import java.util.Arrays;
 import java.util.TreeMap;
 
+import numbers.Numbers;
+
 /**
- * @author Ahmedi
+ * @author Ziya
  *
  */
 public class CodeArray {
@@ -131,22 +134,37 @@ public class CodeArray {
 		return allElements;
 	}
 
+	public int[] arrayInterssection(int[] arr_1, int[] arr_2) {
+		String methodName = "arrayInterssection()";
+		System.out.println("::::::::::::::::::" + methodName + " method start::::::::::::::::::");
 
+		int resultArrSize = Math.min(arr_1.length, arr_2.length);
+		int[] result = new int[resultArrSize];
+		int p = 0;
+		int m = 0;
 
+		Arrays.sort(arr_2);
 
+		for (int i = 0; i < arr_1.length; i++) {
+			if(Arrays.binarySearch(arr_2, arr_1[i]) >= 0) {
+				result[p++] = arr_1[i];
+			}
+		}
 
+		int[] result_2 = new int[p];
+		for(int elt : result) {
+			if(m == p + 1) {
+				break;
+			}
+			result_2[m++] = elt;
 
+		}
+		
+		System.out.println("Inter sected array is :::: ");
+		Numbers numbi = new Numbers();
+		numbi.displaySeries(result_2);
 
-
-
-
-
-
-
-
-
-
-
-
-
+		System.out.println("::::::::::::::::::" + methodName + " method end::::::::::::::::::");
+		return result_2;
+	}
 }

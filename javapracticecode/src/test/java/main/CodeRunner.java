@@ -254,9 +254,18 @@ public class CodeRunner {
 		chrStatistics = codeStr.chrTypeCounter(str);
 		 */
 
+		/*
 		// string array to string conversion
 		strArr = strUtil.getStringArray();
 		str = codeStr.convertStrArrToStr(strArr);
+		*/
+		
+		// to find the intersection of two arrays
+		int[] num_1 = numbi.getSeries();
+		int[] num_2 = numbi.getSeries();
+		codeArr.arrayInterssection(num_1, num_2);
+		
+		
 
 		System.out.println("::::::::::::::::::: Exit :::::::::::::::::::");
 
