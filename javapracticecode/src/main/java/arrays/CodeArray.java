@@ -134,24 +134,32 @@ public class CodeArray {
 		return allElements;
 	}
 
-	public int[] arrayInterssection(int[] arr_1, int[] arr_2) {
-		String methodName = "arrayInterssection()";
+	/**Finds the intersection of two elements
+	 * @param arr_1
+	 * @param arr_2
+	 * @return
+	 */
+	public int[] arrayIntersection(int[] arr_1, int[] arr_2) {
+		String methodName = "arrayIntersection()";
 		System.out.println("::::::::::::::::::" + methodName + " method start::::::::::::::::::");
 
 		int resultArrSize = Math.min(arr_1.length, arr_2.length);
-		int[] result = new int[resultArrSize];
-		int p = 0;
-		int m = 0;
+		int p = 0; //points to index of intermediate array result
+		int m = 0; // points to index of result_2
 
+		int[] result = new int[resultArrSize];
+		int[] result_2 = null;
+		
 		Arrays.sort(arr_2);
 
+		// iterating over arr_1 for presence of arr_1 elements in arr_2
 		for (int i = 0; i < arr_1.length; i++) {
 			if(Arrays.binarySearch(arr_2, arr_1[i]) >= 0) {
 				result[p++] = arr_1[i];
 			}
 		}
-
-		int[] result_2 = new int[p + 1];
+		p = p - 1;
+		result_2 = new int[p + 1];
 		for(int elt : result) {
 			if(m == p + 1) {
 				break;
@@ -159,7 +167,7 @@ public class CodeArray {
 			result_2[m++] = elt;
 
 		}
-		
+
 		System.out.println("Inter sected array is :::: ");
 		Numbers numbi = new Numbers();
 		numbi.displaySeries(result_2);
