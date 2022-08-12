@@ -263,10 +263,8 @@ public class CodeRunner {
 		// to find the intersection of two arrays
 		int[] num_1 = numbi.getSeries();
 		int[] num_2 = numbi.getSeries();
-		codeArr.arrayInterssection(num_1, num_2);
+		codeArr.arrayIntersection(num_1, num_2);
 		
-		
-
 		System.out.println("::::::::::::::::::: Exit :::::::::::::::::::");
 
 	}

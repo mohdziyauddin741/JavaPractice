@@ -143,36 +143,45 @@ public class CodeArray {
 		String methodName = "arrayIntersection()";
 		System.out.println("::::::::::::::::::" + methodName + " method start::::::::::::::::::");
 
-		int resultArrSize = Math.min(arr_1.length, arr_2.length);
-		int p = 0; //points to index of intermediate array result
-		int m = 0; // points to index of result_2
+		int interArrArrSize = Math.min(arr_1.length, arr_2.length); // finding out the maxi size that intermediate array can have
+		int p = 0; //points to index of intermediate array interArr
+		int m = 0; // points to index of result
 
-		int[] result = new int[resultArrSize];
-		int[] result_2 = null;
+		int[] interArr = new int[interArrArrSize];
+		int[] result = null;
 		
-		Arrays.sort(arr_2);
+		Arrays.sort(arr_2); // binary search needs array in sorted form so sorting
 
-		// iterating over arr_1 for presence of arr_1 elements in arr_2
+		/*
+		 *  iterating over arr_2 for presence of arr_1 elements in arr_2 using binary search
+		 */
 		for (int i = 0; i < arr_1.length; i++) {
 			if(Arrays.binarySearch(arr_2, arr_1[i]) >= 0) {
-				result[p++] = arr_1[i];
+				interArr[p++] = arr_1[i];
 			}
 		}
+
 		p = p - 1;
-		result_2 = new int[p + 1];
-		for(int elt : result) {
+		result = new int[p + 1];
+		for(int elt : interArr) {
 			if(m == p + 1) {
 				break;
 			}
-			result_2[m++] = elt;
+			result[m++] = elt;
 
 		}
 
 		System.out.println("Inter sected array is :::: ");
 		Numbers numbi = new Numbers();
-		numbi.displaySeries(result_2);
+		numbi.displaySeries(result);
 
 		System.out.println("::::::::::::::::::" + methodName + " method end::::::::::::::::::");
-		return result_2;
+		return result;
 	}
+	
+	public void detectDuplicates() {
+		
+	}
+	
+	
 }
