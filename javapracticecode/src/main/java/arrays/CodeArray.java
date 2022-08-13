@@ -1,6 +1,7 @@
 package arrays;
 
 import java.util.Arrays;
+import java.util.Iterator;
 import java.util.TreeMap;
 
 import numbers.Numbers;
@@ -149,9 +150,13 @@ public class CodeArray {
 
 		int[] interArr = new int[interArrArrSize];
 		int[] result = null;
-		
+
 		Arrays.sort(arr_2); // binary search needs array in sorted form so sorting
 
+		/*
+		Algos algoCall = new Algos();
+		 int[] resultx = algoCall.binarySearch(interArr, arr_1[0]);
+		 */
 		/*
 		 *  iterating over arr_2 for presence of arr_1 elements in arr_2 using binary search
 		 */
@@ -178,10 +183,57 @@ public class CodeArray {
 		System.out.println("::::::::::::::::::" + methodName + " method end::::::::::::::::::");
 		return result;
 	}
-	
-	public void detectDuplicates() {
-		
+
+	/**
+	 * Removes duplicate element
+	 */
+	public void detectDuplicates(int arr[]) {
+		String methodName = "detectDuplicates()";
+		System.out.println("::::::::::::::::::" + methodName + " method start::::::::::::::::::");
+
+
+		int[] dupIndexes =  new int[arr.length];
+		int[] nonDupIndexes =  new int[arr.length];
+
+
+		int dupIndexesIndex = 0;
+		int nonDupIndexesIndex = 0;
+
+
+		for (int i = 0; i < arr.length; i++) {
+			for(int j = i + 1; j < arr.length; j++) {
+				//				System.out.println("arr[i] ==== " + arr[i] + ", arr[j] ==== " + arr[j]);
+				if (arr[i] == arr[j] /* && arr[j] != -1 */) {
+					dupIndexes[dupIndexesIndex++] = j;
+					System.out.println(arr[i] + " is duplicate");
+					//					arr[j] = -1;
+				}
+				/*
+				else {
+
+					nonDupIndexes[nonDupIndexesIndex++] = j;
+					System.out.println(arr[i] + " is unique");
+
+				}
+				 */		
+			}
+		}
+
+		int[] uniqueArray =  new int[nonDupIndexesIndex];
+
+		for (int i = 0; i < uniqueArray.length; i++) {
+			uniqueArray[i] = arr[nonDupIndexes[i]];
+		}
+
+
+		Numbers numbi = new Numbers();
+		numbi.displaySeries(uniqueArray);
+
+
+
+		System.out.println("::::::::::::::::::" + methodName + " method end::::::::::::::::::");
+		//		return result;
 	}
-	
-	
+
+
 }

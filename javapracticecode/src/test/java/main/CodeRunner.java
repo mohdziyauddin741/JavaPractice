@@ -260,11 +260,16 @@ public class CodeRunner {
 		str = codeStr.convertStrArrToStr(strArr);
 		*/
 		
+		/*
 		// to find the intersection of two arrays
 		int[] num_1 = numbi.getSeries();
 		int[] num_2 = numbi.getSeries();
 		codeArr.arrayIntersection(num_1, num_2);
+		*/
 		
+		// to find duplicate elements
+		int[] num_1 = numbi.getSeries();
+		codeArr.detectDuplicates(num_1);
 		System.out.println("::::::::::::::::::: Exit :::::::::::::::::::");
 
 	}
