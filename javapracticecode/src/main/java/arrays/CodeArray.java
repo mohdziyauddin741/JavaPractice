@@ -218,7 +218,7 @@ public class CodeArray {
 				 */		
 			}
 		}
-
+		
 		int[] uniqueArray =  new int[nonDupIndexesIndex];
 
 		for (int i = 0; i < uniqueArray.length; i++) {
