@@ -12,6 +12,9 @@ import numbers.Numbers;
  */
 public class CodeArray {
 
+	Algos algo = new Algos();
+	Numbers numbi = new Numbers();
+
 	public int[] firstThreeHighestElements(int[] arr) {
 		String methodName = "firstThreeHighestElements()";
 		System.out.println("::::::::::::::::::" + methodName + " method start::::::::::::::::::");
@@ -218,18 +221,32 @@ public class CodeArray {
 				 */		
 			}
 		}
-		
-		int[] uniqueArray =  new int[nonDupIndexesIndex];
 
+				int[] uniqueArray =  new int[arr.length];
+				/*
 		for (int i = 0; i < uniqueArray.length; i++) {
 			uniqueArray[i] = arr[nonDupIndexes[i]];
 		}
-
-
-		Numbers numbi = new Numbers();
+		 */
+		
+				numbi.displaySeries(dupIndexes);
+		
+				
+		int m = 0;
+		for (int i = 0; i < arr.length; i++) {
+			
+			Arrays.sort(dupIndexes);
+//			int[] result = algo.binarySearch(dupIndexes, 2);
+//			System.out.println("algo.binarySearch(dupIndexes, 2) ==== " + result.length);
+			System.out.println("Arrays.binarySearch(dupIndexes, i) ==== " + Arrays.binarySearch(dupIndexes, i) + " i ==== " + i);
+			if (Arrays.binarySearch(dupIndexes, i) < 0) {
+				uniqueArray[m++] = arr[i];
+				System.out.println("m ==== " + m + "arr[i] ==== " + arr[i] + " uniqueArray[m++] ==== " + uniqueArray[m]);
+		
+			}
+		}
+		
 		numbi.displaySeries(uniqueArray);
-
-
 
 		System.out.println("::::::::::::::::::" + methodName + " method end::::::::::::::::::");
 		//		return result;
