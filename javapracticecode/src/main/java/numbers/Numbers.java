@@ -117,11 +117,11 @@ public class Numbers {
 
 		int org = inputNo;
 		int digit = -1;
-		int revNo = -1;
+		int revNo = 0;
 
-		while(inputNo == 0) {
+		while(inputNo != 0) {
 			digit = inputNo % 10;
-			revNo = digit * 10;
+			revNo = revNo * 10 + digit;
 			inputNo = inputNo / 10;
 		}
 		System.out.println("Reversed No ==== " + revNo);
@@ -133,7 +133,7 @@ public class Numbers {
 		else {
 			isPalindrome = false;			
 		}
-		System.out.println("Is number ==== " + org + " palindrome >>>> " + isPalindrome);
+		System.out.println("Is number ==== " + org + ", palindrome >>>> " + isPalindrome);
 
 		System.out.println(":::::::::::::::::::End of Method " + methodName + ":::::::::::::::::::");
 		return isPalindrome;
