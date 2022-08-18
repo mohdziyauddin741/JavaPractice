@@ -13,7 +13,7 @@ import numbers.Numbers;
 public class CodeArray {
 
 	Algos algo = new Algos();
-	Numbers numbi = new Numbers();
+	ArrayUtil arrUtil = new ArrayUtil();
 
 	public int[] firstThreeHighestElements(int[] arr) {
 		String methodName = "firstThreeHighestElements()";
@@ -181,7 +181,7 @@ public class CodeArray {
 
 		System.out.println("Inter sected array is :::: ");
 		Numbers numbi = new Numbers();
-		numbi.displaySeries(result);
+		arrUtil.displaySeries(result);
 
 		System.out.println("::::::::::::::::::" + methodName + " method end::::::::::::::::::");
 		return result;
@@ -229,7 +229,7 @@ public class CodeArray {
 		}
 		 */
 		
-				numbi.displaySeries(dupIndexes);
+				arrUtil.displaySeries(dupIndexes);
 		
 				
 		int m = 0;
@@ -246,7 +246,7 @@ public class CodeArray {
 			}
 		}
 		
-		numbi.displaySeries(uniqueArray);
+		arrUtil.displaySeries(uniqueArray);
 
 		System.out.println("::::::::::::::::::" + methodName + " method end::::::::::::::::::");
 		//		return result;

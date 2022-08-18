@@ -11,6 +11,8 @@ import numbers.Numbers;
  */
 public class Algos {
 
+	ArrayUtil arrayUtil = new ArrayUtil();
+
 	/**
 	 * Searches for an element in an array using binary search algo
 	 */
@@ -20,8 +22,7 @@ public class Algos {
 
 		Arrays.sort(arr);
 		System.out.println("Sorted Array :::: ");
-		Numbers num = new Numbers();
-		num.displaySeries(arr);
+		arrayUtil.displaySeries(arr);
 
 		int high = arr.length - 1;
 		int low = 0;

@@ -6,6 +6,7 @@ import java.util.TreeMap;
 import java.util.TreeSet;
 
 import arrays.Algos;
+import arrays.ArrayUtil;
 import arrays.CodeArray;
 import collections.CodeCollections;
 import company.interviews.NykaRound1;
@@ -71,6 +72,7 @@ public class CodeRunner {
 		NykaRound1 nyka = new NykaRound1();
 		CodeArray codeArr = new CodeArray();
 		StringUtil strUtil = new StringUtil();
+		ArrayUtil arrUtil = new ArrayUtil();
 
 		TreeSet<Character> dupChrResult = new TreeSet<Character>();
 		TreeMap<Character, Integer> dupChrCount = new TreeMap<Character, Integer>();
@@ -268,7 +270,7 @@ public class CodeRunner {
 		*/
 		
 		// to find duplicate elements
-		int[] num_1 = numbi.getSeries();
+		int[] num_1 = arrUtil.getSeries();
 		codeArr.detectDuplicates(num_1);
 		System.out.println("::::::::::::::::::: Exit :::::::::::::::::::");
 

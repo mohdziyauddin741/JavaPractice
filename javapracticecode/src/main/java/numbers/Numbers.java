@@ -109,74 +109,35 @@ public class Numbers {
 		return isPrimeNo;
 	}
 
-	/**
-	 * Checks weather the passed array has only odd numbers
-	 * 
-	 * @param numList : Array of type int
-	 * @return
-	 */
-	public boolean checkSeriesIsOdd(int[] numList) {
-		String methodName = "checkSeriesIsOdd";
+	public boolean checkPalindrome(int inputNo) {
+		String methodName = "checkPalindrome";
 		System.out.println(":::::::::::::::::::Start of Method " + methodName + ":::::::::::::::::::");
 
-		boolean isElementEven = false;
+		boolean isPalindrome = false;
 
-		for (int i = 0; i < numList.length; i++) {
-			if (numList[i] % 2 == 0) {
-				System.out.println("Even number at index ==== " + i + " value ==== " + numList[i]);
-				if (!isElementEven) {
-					isElementEven = true;
-				}
-			}
+		int org = inputNo;
+		int digit = -1;
+		int revNo = -1;
+
+		while(inputNo == 0) {
+			digit = inputNo % 10;
+			revNo = digit * 10;
+			inputNo = inputNo / 10;
 		}
+		System.out.println("Reversed No ==== " + revNo);
 
-		System.out.println("Does the number series contains only odd number >>>> " + !isElementEven);
-
-		System.out.println(":::::::::::::::::::End of Method " + methodName + ":::::::::::::::::::");
-		return !isElementEven;
-	}
-
-	/**
-	 * Fetches array of type int from keyboard
-	 */
-	public int[] getSeries() {
-		String methodName = "getSeries()";
-		System.out.println(":::::::::::::::::::Start of Method " + methodName + ":::::::::::::::::::");
-
-		int arraySize = -1;
-		int[] numSeries = null;
-
-		System.out.println("Enter the size of Array");
-		arraySize = scanKeyboard.nextInt();
-		numSeries = new int[arraySize];
-
-		System.out.println("Enter the Array Elements");
-		for (int i = 0; i < numSeries.length; i++) {
-			numSeries[i] = scanKeyboard.nextInt();
-		}
-
-		System.out.println(":::::::::::::::::::End of Method " + methodName + ":::::::::::::::::::");
-		return numSeries;
-	}
-
-	/**
-	 * Displays array on console
-	 */
-	public void displaySeries(int[] numSeries) {
-		String methodName = "displaySeries()";
-		System.out.println(":::::::::::::::::::Start of Method " + methodName + ":::::::::::::::::::");
-
-		System.out.println("Array size ==== " + numSeries.length);
-		System.out.println("Array :---");
-		for (int i = 0; i < numSeries.length; i++) {
-			System.out.print(numSeries[i] + "\t");
-			if (i % 10 == 0 && i != 0) {
-				System.out.println();
-			}
-		}
+		if (org == revNo) {
+			isPalindrome = true;			
+		} 
 		
-		System.out.println();
+		else {
+			isPalindrome = false;			
+		}
+		System.out.println("Is number ==== " + org + " palindrome >>>> " + isPalindrome);
+
 		System.out.println(":::::::::::::::::::End of Method " + methodName + ":::::::::::::::::::");
+		return isPalindrome;
 	}
-	
+
+
 }
