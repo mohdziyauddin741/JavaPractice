@@ -693,6 +693,34 @@ public class CodeStrings {
 		System.out.println("::::::::::::::::::" + methodName + " method end::::::::::::::::::");
 		return str;
 	}
+	
+	public void getUniqueElements(String inputStr) {
+		String methodName = "getUniqueElements()";
+		System.out.println("::::::::::::::::::" + methodName + " method start::::::::::::::::::");
+		
+		String uniqueChr = "";
+		boolean isUnique = true;
+		
+		for (int i = 0; i < inputStr.length(); i++) {
+			for(int j = 0; j < inputStr.length(); j++) {
+				if(inputStr.charAt(i) == inputStr.charAt(j) && i != j) {
+					isUnique = false;
+				}
+			}
+				
+				
+			if(isUnique) {
+				System.out.println("Unique character ====" + inputStr.charAt(i));
+				uniqueChr = uniqueChr + inputStr.charAt(i);
+			}
+			
+		}
+		
+		
+		
+		System.out.println("::::::::::::::::::" + methodName + " method end::::::::::::::::::");
+		return str;
+	}
 
 
 }
