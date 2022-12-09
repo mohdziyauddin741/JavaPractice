@@ -246,7 +246,13 @@ public class CodeRunner {
 		lengthStr = scanner.next();
 		lengthResult = codeStr.findStringLength(lengthStr);
 		 */
-
+		
+		// to get the unique elements in an string
+		System.out.println("Enter the string in which unique characters to be detected");
+		str = scanner.nextLine();
+		codeStr.getUniqueElements(str);
+		
+		
 		/*		
 		// character type statistics in a string
 		System.out.println("Enter the string whose statistics to be founded");
