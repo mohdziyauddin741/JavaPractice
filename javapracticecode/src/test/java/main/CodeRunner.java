@@ -270,7 +270,7 @@ public class CodeRunner {
 		// to find duplicate elements
 		int[] num_1 = numbi.getSeries();
 		codeArr.detectDuplicates(num_1);
-		System.out.println("::::::::::::::::::: Exit :::::::::::::::::::");
+		System.out.println("::::::::::::::::::: Exit ");
 
 	}
 }
