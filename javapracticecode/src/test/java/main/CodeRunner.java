@@ -20,7 +20,7 @@ import strings.StringUtil;
 public class CodeRunner {
 
 	public static void main(String[] args) {
-		System.out.println("::::::::::::::::::: Weblcome :::::::::::::::::::");
+		System.out.println("::::::::::::::::::: Welcome :::::::::::::::::::");
 
 		String[] strArr = null;
 		// String str = "Myth";
@@ -44,7 +44,7 @@ public class CodeRunner {
 		int[] chrStatistics = new int [5];
 		// int[] val = new int[2];
 		int[] numArray = {};
-		//		int num = -1;
+				int num = -1;
 		//		int arrSize = -1;
 		//		int toBeSearchedElement = -1;
 		//		int index = -1;
@@ -63,6 +63,7 @@ public class CodeRunner {
 		// boolean isNumSeriesOnlyOdd = false;
 		boolean palindromeResult = false;
 		boolean anagramResult = false;
+		boolean isArmstongNumResult = false;
 
 		Scanner scanner = new Scanner(System.in);
 		Numbers numbi = new Numbers();
@@ -98,6 +99,12 @@ public class CodeRunner {
 		isPrimeNoResult = numbi.validateIsPrimeNo(num);
 		System.out.println("Is number ==== " + num + ", Prime No >>>> " + isPrimeNoResult);
 		 */
+		
+		// code to validate the entered number is Armstrong No
+		System.out.println("Enter the Number for Armststrong validation");
+		num = scanner.nextInt();
+		isArmstongNumResult = numbi.checkArmstrongNum(num);
+		System.out.println("Is " + num + " an Armstrong number >>> " + isArmstongNumResult);
 
 		// main code to check weather all elements in the array are odd or not
 		/*
@@ -248,10 +255,11 @@ public class CodeRunner {
 		 */
 		
 		// to get the unique elements in an string
+		/*
 		System.out.println("Enter the string in which unique characters to be detected");
 		str = scanner.nextLine();
 		codeStr.getUniqueElements(str);
-		
+		*/
 		
 		/*		
 		// character type statistics in a string

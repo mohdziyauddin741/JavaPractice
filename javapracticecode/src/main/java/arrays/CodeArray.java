@@ -180,9 +180,8 @@ public class CodeArray {
 		}
 
 		System.out.println("Inter sected array is :::: ");
-		Numbers numbi = new Numbers();
-		numbi.displaySeries(result);
-
+		ArrayUtil arrUtil = new ArrayUtil();
+		arrUtil.displaySeries(result);
 		System.out.println("::::::::::::::::::" + methodName + " method end::::::::::::::::::");
 		return result;
 	}
@@ -222,35 +221,64 @@ public class CodeArray {
 			}
 		}
 
-				int[] uniqueArray =  new int[arr.length];
-				/*
+		int[] uniqueArray =  new int[arr.length];
+		/*
 		for (int i = 0; i < uniqueArray.length; i++) {
 			uniqueArray[i] = arr[nonDupIndexes[i]];
 		}
 		 */
-		
-				numbi.displaySeries(dupIndexes);
-		
-				
+
+		ArrayUtil arrUtil = new ArrayUtil();
+		arrUtil.displaySeries(dupIndexes);
+
 		int m = 0;
 		for (int i = 0; i < arr.length; i++) {
-			
+
 			Arrays.sort(dupIndexes);
-//			int[] result = algo.binarySearch(dupIndexes, 2);
-//			System.out.println("algo.binarySearch(dupIndexes, 2) ==== " + result.length);
+			//			int[] result = algo.binarySearch(dupIndexes, 2);
+			//			System.out.println("algo.binarySearch(dupIndexes, 2) ==== " + result.length);
 			System.out.println("Arrays.binarySearch(dupIndexes, i) ==== " + Arrays.binarySearch(dupIndexes, i) + " i ==== " + i);
 			if (Arrays.binarySearch(dupIndexes, i) < 0) {
 				uniqueArray[m++] = arr[i];
 				System.out.println("m ==== " + m + "arr[i] ==== " + arr[i] + " uniqueArray[m++] ==== " + uniqueArray[m]);
-		
+
 			}
 		}
-		
-		numbi.displaySeries(uniqueArray);
+
+		arrUtil.displaySeries(uniqueArray);
 
 		System.out.println("::::::::::::::::::" + methodName + " method end::::::::::::::::::");
 		//		return result;
 	}
+
+
+	/**
+	 * Checks weather the passed array has only odd numbers
+	 * 
+	 * @param numList : Array of type int
+	 * @return
+	 */
+	public boolean checkSeriesIsOdd(int[] numList) {
+		String methodName = "checkSeriesIsOdd";
+		System.out.println(":::::::::::::::::::Start of Method " + methodName + ":::::::::::::::::::");
+
+		boolean isElementEven = false;
+
+		for (int i = 0; i < numList.length; i++) {
+			if (numList[i] % 2 == 0) {
+				System.out.println("Even number at index ==== " + i + " value ==== " + numList[i]);
+				if (!isElementEven) {
+					isElementEven = true;
+				}
+			}
+		}
+
+		System.out.println("Does the number series contains only odd number >>>> " + !isElementEven);
+
+		System.out.println(":::::::::::::::::::End of Method " + methodName + ":::::::::::::::::::");
+		return !isElementEven;
+	}
+
 
 
 }

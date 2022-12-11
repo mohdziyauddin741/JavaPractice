@@ -109,74 +109,36 @@ public class Numbers {
 		return isPrimeNo;
 	}
 
-	/**
-	 * Checks weather the passed array has only odd numbers
-	 * 
-	 * @param numList : Array of type int
+	/**Checks weather the  number is am armstrong number
+	 * @param num
 	 * @return
 	 */
-	public boolean checkSeriesIsOdd(int[] numList) {
-		String methodName = "checkSeriesIsOdd";
+	public boolean checkArmstrongNum(int num) {
+		String methodName = "checkArmstrongNum";
 		System.out.println(":::::::::::::::::::Start of Method " + methodName + ":::::::::::::::::::");
 
-		boolean isElementEven = false;
+		boolean isArmstrongNo = false;
+		int digit = 0;
+		int cubeResult = 0;
+		
+		int numpreserved = num;
+		
+		System.out.println("num ==== " + num);
 
-		for (int i = 0; i < numList.length; i++) {
-			if (numList[i] % 2 == 0) {
-				System.out.println("Even number at index ==== " + i + " value ==== " + numList[i]);
-				if (!isElementEven) {
-					isElementEven = true;
-				}
-			}
+		while (num != 0) {
+			digit = num % 10;
+			cubeResult = cubeResult + digit * digit * digit;
+			num = num / 10;
 		}
+		System.out.println("cubeResult ====" + cubeResult);
 
-		System.out.println("Does the number series contains only odd number >>>> " + !isElementEven);
-
-		System.out.println(":::::::::::::::::::End of Method " + methodName + ":::::::::::::::::::");
-		return !isElementEven;
-	}
-
-	/**
-	 * Fetches array of type int from keyboard
-	 */
-	public int[] getSeries() {
-		String methodName = "getSeries()";
-		System.out.println(":::::::::::::::::::Start of Method " + methodName + ":::::::::::::::::::");
-
-		int arraySize = -1;
-		int[] numSeries = null;
-
-		System.out.println("Enter the size of Array");
-		arraySize = scanKeyboard.nextInt();
-		numSeries = new int[arraySize];
-
-		System.out.println("Enter the Array Elements");
-		for (int i = 0; i < numSeries.length; i++) {
-			numSeries[i] = scanKeyboard.nextInt();
-		}
-
-		System.out.println(":::::::::::::::::::End of Method " + methodName + ":::::::::::::::::::");
-		return numSeries;
-	}
-
-	/**
-	 * Displays array on console
-	 */
-	public void displaySeries(int[] numSeries) {
-		String methodName = "displaySeries()";
-		System.out.println(":::::::::::::::::::Start of Method " + methodName + ":::::::::::::::::::");
-
-		System.out.println("Array size ==== " + numSeries.length);
-		System.out.println("Array :---");
-		for (int i = 0; i < numSeries.length; i++) {
-			System.out.print(numSeries[i] + "\t");
-			if (i % 10 == 0 && i != 0) {
-				System.out.println();
-			}
+		if (cubeResult == numpreserved) {
+			isArmstrongNo = true;
 		}
 		
-		System.out.println();
+		System.out.println("Is num ==== " + numpreserved + "  an Armstrong number >>>> " + isArmstrongNo);
+
 		System.out.println(":::::::::::::::::::End of Method " + methodName + ":::::::::::::::::::");
+		return isArmstrongNo;
 	}
-	
 }

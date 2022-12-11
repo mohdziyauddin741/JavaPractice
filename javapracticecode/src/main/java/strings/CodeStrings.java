@@ -694,6 +694,10 @@ public class CodeStrings {
 		return str;
 	}
 	
+	/**Finds the non - repeating characters in the string
+	 * @param inputStr
+	 * @return
+	 */
 	public String getUniqueElements(String inputStr) {
 		String methodName = "getUniqueElements()";
 		System.out.println("::::::::::::::::::" + methodName + " method start::::::::::::::::::");
@@ -725,5 +729,5 @@ public class CodeStrings {
 		return uniqueChr;
 	}
 
-
+	
 }
