@@ -114,7 +114,7 @@ public class Numbers {
 	 * @return
 	 */
 	public boolean checkArmstrongNum(int num) {
-		String methodName = "checkArmstrongNum";
+		String methodName = "checkArmstrongNum()";
 		System.out.println(":::::::::::::::::::Start of Method " + methodName + ":::::::::::::::::::");
 
 		boolean isArmstrongNo = false;
@@ -140,5 +140,15 @@ public class Numbers {
 
 		System.out.println(":::::::::::::::::::End of Method " + methodName + ":::::::::::::::::::");
 		return isArmstrongNo;
+	}
+	
+	public boolean checkIsNoPalindrome(int num) {
+		String methodName = "checkIsNoPalindrome()";
+		System.out.println(":::::::::::::::::::Start of Method " + methodName + ":::::::::::::::::::");
+		
+		
+		
+		System.out.println(":::::::::::::::::::End of Method " + methodName + ":::::::::::::::::::");
+		return isArmstrongNo;	
 	}
 }

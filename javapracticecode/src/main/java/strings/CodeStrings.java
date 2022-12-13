@@ -693,7 +693,7 @@ public class CodeStrings {
 		System.out.println("::::::::::::::::::" + methodName + " method end::::::::::::::::::");
 		return str;
 	}
-	
+
 	/**Finds the non - repeating characters in the string
 	 * @param inputStr
 	 * @return
@@ -701,33 +701,75 @@ public class CodeStrings {
 	public String getUniqueElements(String inputStr) {
 		String methodName = "getUniqueElements()";
 		System.out.println("::::::::::::::::::" + methodName + " method start::::::::::::::::::");
-		
+
 		String uniqueChr = "";
 
 		boolean isUnique = true;
-		
+
 		for (int i = 0; i < inputStr.length(); i++) {
 
 			isUnique = true;
 
 			for(int j = 0; j < inputStr.length(); j++) {
-			
+
 				if(inputStr.charAt(i) == inputStr.charAt(j) && i != j) {
 					isUnique = false;
 				}
-			
+
 			}
-				
+
 			if(isUnique) {
 				System.out.println("Unique character ====" + inputStr.charAt(i));
 				uniqueChr = uniqueChr + inputStr.charAt(i);
 			}
-			
+
 		}
-		
+
 		System.out.println("::::::::::::::::::" + methodName + " method end::::::::::::::::::");
 		return uniqueChr;
 	}
 
-	
+	/**Removes junk characters from the string
+	 * @param inputStr
+	 * @return
+	 */
+	public String removeUnwantedChrInStr(String inputStr) {
+		String methodName = "removeUnwantedChrInStr()";
+		System.out.println("::::::::::::::::::" + methodName + " method start::::::::::::::::::");
+
+		String filteredStr = "";
+		String junkStr = "";
+
+		for (int i = 0; i < inputStr.length(); i++) {
+
+			// if (Character.isLetter(inputStr.charAt(i))) {\
+			if ((inputStr.charAt(i) >= 'A' && inputStr.charAt(i) <= 'Z')
+					|| (inputStr.charAt(i) >= 'a' && inputStr.charAt(i) <= 'z')) {
+				filteredStr = filteredStr + inputStr.charAt(i);
+				// System.out.println("chr ==== " + inputStr.charAt(i) + " at position i ==== "
+				// + i +" is alphabetic");
+			}
+
+			else if (inputStr.charAt(i) >= '0' && inputStr.charAt(i) <= '9') {
+				filteredStr = filteredStr + inputStr.charAt(i);
+				// System.out.println("chr ==== " + inputStr.charAt(i) + " at position i ==== "
+				// + i +" is digit");
+			}
+
+			else {
+				junkStr = junkStr + inputStr.charAt(i);
+				// System.out.println("chr ==== " + inputStr.charAt(i) + " at position i ==== "
+				// + i +" is neither alphabet nor digit");
+			}
+
+		}
+
+		System.out.println("Given String ===== " + inputStr);
+		System.out.println("Filtered String ===== " + filteredStr);
+		System.out.println("Junk String ===== " + junkStr);
+
+		System.out.println("::::::::::::::::::" + methodName + " method end::::::::::::::::::");
+		return filteredStr;
+	}
+
 }

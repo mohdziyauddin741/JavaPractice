@@ -37,14 +37,13 @@ public class CodeRunner {
 		//		String inputStrRemoveChr = "";
 		//		String inputChrRemChr = "";
 		//		String inputCaseTye = "";
+		String strResult = "";
 		String lengthStr = "";
-
-
 
 		int[] chrStatistics = new int [5];
 		// int[] val = new int[2];
 		int[] numArray = {};
-				int num = -1;
+		int num = -1;
 		//		int arrSize = -1;
 		//		int toBeSearchedElement = -1;
 		//		int index = -1;
@@ -55,8 +54,6 @@ public class CodeRunner {
 		//		int endType = -1;
 		int lengthResult = -1;
 		int size = 0;
-
-
 
 		// boolean vowelResult = false;
 		// boolean isPrimeNoResult = false;
@@ -99,12 +96,14 @@ public class CodeRunner {
 		isPrimeNoResult = numbi.validateIsPrimeNo(num);
 		System.out.println("Is number ==== " + num + ", Prime No >>>> " + isPrimeNoResult);
 		 */
-		
+
+		/*
 		// code to validate the entered number is Armstrong No
 		System.out.println("Enter the Number for Armststrong validation");
 		num = scanner.nextInt();
 		isArmstongNumResult = numbi.checkArmstrongNum(num);
 		System.out.println("Is " + num + " an Armstrong number >>> " + isArmstongNumResult);
+		 */
 
 		// main code to check weather all elements in the array are odd or not
 		/*
@@ -253,14 +252,14 @@ public class CodeRunner {
 		lengthStr = scanner.next();
 		lengthResult = codeStr.findStringLength(lengthStr);
 		 */
-		
+
 		// to get the unique elements in an string
 		/*
 		System.out.println("Enter the string in which unique characters to be detected");
 		str = scanner.nextLine();
 		codeStr.getUniqueElements(str);
-		*/
-		
+		 */
+
 		/*		
 		// character type statistics in a string
 		System.out.println("Enter the string whose statistics to be founded");
@@ -273,6 +272,9 @@ public class CodeRunner {
 		strArr = strUtil.getStringArray();
 		str = codeStr.convertStrArrToStr(strArr);
 		 */
+		
+		// to remove junk characters from the string
+		strResult = codeStr.removeUnwantedChrInStr("世界您好!Ziおねがいします。YA123");
 
 		/*
 		// to find the intersection of two arrays
@@ -285,7 +287,7 @@ public class CodeRunner {
 		// to find duplicate elements
 		int[] num_1 = numbi.getSeries();
 		codeArr.detectDuplicates(num_1);
-		System.out.println(" Exit ");
 		 */
+		System.out.println("::::::::::::::: Exit :::::::::::::::");
 	}
 }
