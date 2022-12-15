@@ -10,7 +10,7 @@ import arrays.CodeArray;
 import collections.CodeCollections;
 import company.interviews.NykaRound1;
 import numbers.Numbers;
-import patternprogramming.SquarePattern;
+import patternprogramming.StarPatterns;
 import strings.CodeStrings;
 import strings.StringUtil;
 
@@ -74,7 +74,7 @@ public class CodeRunner {
 		NykaRound1 nyka = new NykaRound1();
 		CodeArray codeArr = new CodeArray();
 		StringUtil strUtil = new StringUtil();
-		SquarePattern	sqPattern = new SquarePattern();
+		StarPatterns	sqPattern = new StarPatterns();
 
 		TreeSet<Character> dupChrResult = new TreeSet<Character>();
 		TreeMap<Character, Integer> dupChrCount = new TreeMap<Character, Integer>();

@@ -2,7 +2,7 @@ package patternprogramming;
 
 import java.util.Iterator;
 
-public class SquarePattern {
+public class StarPatterns {
 
 	public void hollowSquarePattern(int squareSize) {
 		String methodName = "hollowSquarePattern";
