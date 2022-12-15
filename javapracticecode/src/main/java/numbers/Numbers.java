@@ -120,9 +120,9 @@ public class Numbers {
 		boolean isArmstrongNo = false;
 		int digit = 0;
 		int cubeResult = 0;
-		
+
 		int numpreserved = num;
-		
+
 		System.out.println("num ==== " + num);
 
 		while (num != 0) {
@@ -135,20 +135,42 @@ public class Numbers {
 		if (cubeResult == numpreserved) {
 			isArmstrongNo = true;
 		}
-		
+
 		System.out.println("Is num ==== " + numpreserved + "  an Armstrong number >>>> " + isArmstrongNo);
 
 		System.out.println(":::::::::::::::::::End of Method " + methodName + ":::::::::::::::::::");
 		return isArmstrongNo;
 	}
-	
+
+	/**Checks  weather the integer is palindrome or not
+	 * @param num
+	 * @return
+	 */
 	public boolean checkIsNoPalindrome(int num) {
 		String methodName = "checkIsNoPalindrome()";
 		System.out.println(":::::::::::::::::::Start of Method " + methodName + ":::::::::::::::::::");
-		
-		
-		
+
+		boolean isNoPalindrome = false;
+
+		int digit = 0;
+		int revNo = 0;
+		int number = num;
+
+		while (num != 0) {
+			digit = num % 10;
+			revNo = revNo * 10 + digit;
+			num = num / 10;
+		}
+
+		if (number == revNo) {
+			isNoPalindrome = true;
+		}
+
+		System.out.println("actual No ==== " + number);
+		System.out.println("reversed No ==== " + revNo);
+		System.out.println("Is No palindrome ==== " + isNoPalindrome);
+
 		System.out.println(":::::::::::::::::::End of Method " + methodName + ":::::::::::::::::::");
-		return isArmstrongNo;	
+		return isNoPalindrome;
 	}
 }

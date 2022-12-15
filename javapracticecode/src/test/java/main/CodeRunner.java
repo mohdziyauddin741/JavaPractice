@@ -54,6 +54,7 @@ public class CodeRunner {
 		//		int endType = -1;
 		int lengthResult = -1;
 		int size = 0;
+		int palindromeInput = 0;
 
 		// boolean vowelResult = false;
 		// boolean isPrimeNoResult = false;
@@ -61,6 +62,7 @@ public class CodeRunner {
 		boolean palindromeResult = false;
 		boolean anagramResult = false;
 		boolean isArmstongNumResult = false;
+		boolean isNoPalindrome = false;
 
 		Scanner scanner = new Scanner(System.in);
 		Numbers numbi = new Numbers();
@@ -72,6 +74,8 @@ public class CodeRunner {
 
 		TreeSet<Character> dupChrResult = new TreeSet<Character>();
 		TreeMap<Character, Integer> dupChrCount = new TreeMap<Character, Integer>();
+
+		// start numbers 
 
 		// Fibnocci fib = new Fibnocci();
 		// fib.fibnocci(5000);
@@ -103,6 +107,16 @@ public class CodeRunner {
 		num = scanner.nextInt();
 		isArmstongNumResult = numbi.checkArmstrongNum(num);
 		System.out.println("Is " + num + " an Armstrong number >>> " + isArmstongNumResult);
+		 */
+
+		/*
+		// code to check weather the number is palindrome or not
+		System.out.println("Enter the Number for which needs to be checked as plindrome or not ");
+		palindromeInput = scanner.nextInt();
+		isNoPalindrome = numbi.checkIsNoPalindrome(palindromeInput);
+		System.out.println("Is " + palindromeInput + " a palindrome number >>> " + isNoPalindrome);
+		// end numbers
+
 		 */
 
 		// main code to check weather all elements in the array are odd or not
@@ -257,7 +271,7 @@ public class CodeRunner {
 		/*
 		System.out.println("Enter the string in which unique characters to be detected");
 		str = scanner.nextLine();
-		codeStr.getUniqueElements(str);
+		codeStr.getUniqueElements("str");
 		 */
 
 		/*		
@@ -272,9 +286,11 @@ public class CodeRunner {
 		strArr = strUtil.getStringArray();
 		str = codeStr.convertStrArrToStr(strArr);
 		 */
-		
+
+		// /*
 		// to remove junk characters from the string
 		strResult = codeStr.removeUnwantedChrInStr("世界您好!Ziおねがいします。YA123");
+		// */
 
 		/*
 		// to find the intersection of two arrays

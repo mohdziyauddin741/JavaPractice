@@ -723,7 +723,7 @@ public class CodeStrings {
 				uniqueChr = uniqueChr + inputStr.charAt(i);
 			}
 
-		}
+		} 
 
 		System.out.println("::::::::::::::::::" + methodName + " method end::::::::::::::::::");
 		return uniqueChr;
@@ -738,9 +738,15 @@ public class CodeStrings {
 		System.out.println("::::::::::::::::::" + methodName + " method start::::::::::::::::::");
 
 		String filteredStr = "";
-		String junkStr = "";
 
+		filteredStr = inputStr.replaceAll("[^a-zA-Z0-9]", "");
+
+
+		/* start ziya
 		for (int i = 0; i < inputStr.length(); i++) {
+
+		String filteredStr = "";
+		String junkStr = "";
 
 			// if (Character.isLetter(inputStr.charAt(i))) {\
 			if ((inputStr.charAt(i) >= 'A' && inputStr.charAt(i) <= 'Z')
@@ -762,11 +768,11 @@ public class CodeStrings {
 				// + i +" is neither alphabet nor digit");
 			}
 
-		}
+		}*/ // end ziya
 
 		System.out.println("Given String ===== " + inputStr);
 		System.out.println("Filtered String ===== " + filteredStr);
-		System.out.println("Junk String ===== " + junkStr);
+//		System.out.println("Junk String ===== " + junkStr);
 
 		System.out.println("::::::::::::::::::" + methodName + " method end::::::::::::::::::");
 		return filteredStr;
