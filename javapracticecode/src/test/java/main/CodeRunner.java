@@ -10,6 +10,7 @@ import arrays.CodeArray;
 import collections.CodeCollections;
 import company.interviews.NykaRound1;
 import numbers.Numbers;
+import patternprogramming.SquarePattern;
 import strings.CodeStrings;
 import strings.StringUtil;
 
@@ -55,6 +56,8 @@ public class CodeRunner {
 		int lengthResult = -1;
 		int size = 0;
 		int palindromeInput = 0;
+		int squarePatterInput = 0;
+
 
 		// boolean vowelResult = false;
 		// boolean isPrimeNoResult = false;
@@ -71,6 +74,7 @@ public class CodeRunner {
 		NykaRound1 nyka = new NykaRound1();
 		CodeArray codeArr = new CodeArray();
 		StringUtil strUtil = new StringUtil();
+		SquarePattern	sqPattern = new SquarePattern();
 
 		TreeSet<Character> dupChrResult = new TreeSet<Character>();
 		TreeMap<Character, Integer> dupChrCount = new TreeMap<Character, Integer>();
@@ -287,10 +291,10 @@ public class CodeRunner {
 		str = codeStr.convertStrArrToStr(strArr);
 		 */
 
-		// /*
+		 /*
 		// to remove junk characters from the string
 		strResult = codeStr.removeUnwantedChrInStr("世界您好!Ziおねがいします。YA123");
-		// */
+		 */
 
 		/*
 		// to find the intersection of two arrays
@@ -304,6 +308,13 @@ public class CodeRunner {
 		int[] num_1 = numbi.getSeries();
 		codeArr.detectDuplicates(num_1);
 		 */
+		
+		// Star Patterns
+//		sqPattern.zebaLogicSquare(4);
+		System.out.println("Enter the square size");
+		squarePatterInput = scanner.nextInt();
+		sqPattern.hollowSquarePattern(squarePatterInput);
+
 		System.out.println("::::::::::::::: Exit :::::::::::::::");
 	}
 }
