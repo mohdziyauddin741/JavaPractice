@@ -7,6 +7,7 @@ import java.util.TreeSet;
 
 import arrays.Algos;
 import arrays.CodeArray;
+import challenges.Subho;
 import collections.CodeCollections;
 import company.interviews.NykaRound1;
 import numbers.Numbers;
@@ -291,7 +292,7 @@ public class CodeRunner {
 		str = codeStr.convertStrArrToStr(strArr);
 		 */
 
-		 /*
+		/*
 		// to remove junk characters from the string
 		strResult = codeStr.removeUnwantedChrInStr("世界您好!Ziおねがいします。YA123");
 		 */
@@ -308,13 +309,17 @@ public class CodeRunner {
 		int[] num_1 = numbi.getSeries();
 		codeArr.detectDuplicates(num_1);
 		 */
-		
+
+		/*
 		// Star Patterns
 //		sqPattern.zebaLogicSquare(4);
 		System.out.println("Enter the square size");
 		squarePatterInput = scanner.nextInt();
 		sqPattern.hollowSquarePattern(squarePatterInput);
-
+		 */
+		
+		Subho.findUpperAlpAndWords("I am disco Danceer, I AM NOT a Villan");
+		
 		System.out.println("::::::::::::::: Exit :::::::::::::::");
 	}
 }
