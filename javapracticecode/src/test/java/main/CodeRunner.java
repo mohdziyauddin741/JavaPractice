@@ -11,6 +11,7 @@ import challenges.Subho;
 import collections.CodeCollections;
 import company.interviews.NykaRound1;
 import numbers.Numbers;
+import patternprogramming.Square;
 import patternprogramming.StarPatterns;
 import strings.CodeStrings;
 import strings.StringUtil;
@@ -27,7 +28,7 @@ public class CodeRunner {
 		String[] strArr = null;
 		// String str = "Myth";
 		String str = "";
-		//		String inputStr = "";
+				String inputStr = "";
 		//		String outputStr = "";
 		//		String sentence = "";
 		//		String revSentResult = "";
@@ -58,6 +59,7 @@ public class CodeRunner {
 		int size = 0;
 		int palindromeInput = 0;
 		int squarePatterInput = 0;
+		int sqSize = -1;
 
 
 		// boolean vowelResult = false;
@@ -317,8 +319,16 @@ public class CodeRunner {
 		squarePatterInput = scanner.nextInt();
 		sqPattern.hollowSquarePattern(squarePatterInput);
 		 */
+
+		System.out.println("Enter the size of square ::::: ");
+		sqSize = scanner.nextInt();
+		Square.starSquared(sqSize);
 		
-		Subho.findUpperAlpAndWords("I am disco Danceer, I AM NOT a Villan");
+		/*
+		System.out.println("Enter the string whose upper case letter & words starting in upper case ::::: ");
+		inputStr = scanner.nextLine();
+		Subho.findUpperAlpAndWords(inputStr);
+		*/
 		
 		System.out.println("::::::::::::::: Exit :::::::::::::::");
 	}
