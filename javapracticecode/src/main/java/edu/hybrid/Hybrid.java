@@ -1,4 +1,4 @@
-package hybrid;
+package edu.hybrid;
 
 public class Hybrid {
 

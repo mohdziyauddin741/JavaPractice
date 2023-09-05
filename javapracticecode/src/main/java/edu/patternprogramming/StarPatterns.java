@@ -1,4 +1,4 @@
-package patternprogramming;
+package edu.patternprogramming;
 
 import java.util.Iterator;
 

@@ -1,4 +1,4 @@
-package numbers;
+package edu.numbers;
 
 import java.util.Scanner;
 

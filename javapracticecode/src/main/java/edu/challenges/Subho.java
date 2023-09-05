@@ -1,4 +1,4 @@
-package challenges;
+package edu.challenges;
 
 public class Subho {
 	/**Prints the upper case letters in a sentence & words starting in upper case

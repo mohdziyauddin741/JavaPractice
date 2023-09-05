@@ -5,16 +5,16 @@ import java.util.Scanner;
 import java.util.TreeMap;
 import java.util.TreeSet;
 
-import arrays.Algos;
-import arrays.CodeArray;
-import challenges.Subho;
-import collections.CodeCollections;
-import company.interviews.NykaRound1;
-import numbers.Numbers;
-import patternprogramming.Square;
-import patternprogramming.StarPatterns;
-import strings.CodeStrings;
-import strings.StringUtil;
+import edu.arrays.Algos;
+import edu.arrays.CodeArray;
+import edu.challenges.Subho;
+import edu.collections.CodeCollections;
+import edu.company.interviews.NykaRound1;
+import edu.numbers.Numbers;
+import edu.patternprogramming.Square;
+import edu.patternprogramming.StarPatterns;
+import edu.strings.CodeStrings;
+import edu.strings.StringUtil;
 
 /**
  * @author Mohammed Ziyauddin
@@ -319,10 +319,28 @@ public class CodeRunner {
 		squarePatterInput = scanner.nextInt();
 		sqPattern.hollowSquarePattern(squarePatterInput);
 		 */
-
+		
+		/*
 		System.out.println("Enter the size of square ::::: ");
 		sqSize = scanner.nextInt();
 		Square.starSquared(sqSize);
+		*/
+		
+		/*
+		System.out.println("Enter the size of columnwise ascending square ::::: ");
+		sqSize = scanner.nextInt();
+		Square.columnWiseAscending(sqSize);
+		*/
+		
+		/*
+		System.out.println("Enter the size of rowwise ascending square ::::: ");
+		sqSize = scanner.nextInt();
+		Square.rowWiseAscending(sqSize);
+		*/
+		
+		System.out.println("Enter the size of column descending square ::::: ");
+		sqSize = scanner.nextInt();
+		Square.columnWiseDescending(sqSize);
 		
 		/*
 		System.out.println("Enter the string whose upper case letter & words starting in upper case ::::: ");

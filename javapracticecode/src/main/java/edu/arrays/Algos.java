@@ -1,9 +1,9 @@
-package arrays;
+package edu.arrays;
 
 import java.util.Arrays;
 
-import hybrid.Hybrid;
-import numbers.Numbers;
+import edu.hybrid.Hybrid;
+import edu.numbers.Numbers;
 
 /**
  * @author Ahmedi

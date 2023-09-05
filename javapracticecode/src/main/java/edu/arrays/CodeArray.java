@@ -1,10 +1,10 @@
-package arrays;
+package edu.arrays;
 
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.TreeMap;
 
-import numbers.Numbers;
+import edu.numbers.Numbers;
 
 /**
  * @author Ziya

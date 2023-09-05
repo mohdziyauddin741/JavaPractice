@@ -1,7 +1,7 @@
-package company.interviews;
+package edu.company.interviews;
 
-import numbers.Numbers;
-import strings.CodeStrings;
+import edu.numbers.Numbers;
+import edu.strings.CodeStrings;
 
 public class NykaRound1 {
 

@@ -1,12 +1,12 @@
-package strings;
+package edu.strings;
 
 import java.util.ArrayList;
 import java.util.Set;
 import java.util.TreeMap;
 import java.util.TreeSet;
 
-import hybrid.Hybrid;
-import numbers.Numbers;
+import edu.hybrid.Hybrid;
+import edu.numbers.Numbers;
 
 public class CodeStrings {
 
