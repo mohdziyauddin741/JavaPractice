@@ -314,16 +314,14 @@ public class CodeStrings {
 		}
 
 		System.out
-		.println("Input string ==== " + str + " , without dublicate characters are ==== " + strNoDuplicateChr);
+				.println("Input string ==== " + str + " , without dublicate characters are ==== " + strNoDuplicateChr);
 
 		System.out.println("::::::::::::::::::" + methodName + " method end::::::::::::::::::");
 		return strNoDuplicateChr;
 	}
 
 	/**
-	 * Converts string from one case to another case 
-	 * 1 -> upper case 
-	 * 2 -> lower case
+	 * Converts string from one case to another case 1 -> upper case 2 -> lower case
 	 */
 	public String strCaseConverter(int targetCase, String str) {
 		String methodName = "strCaseConverter()";
@@ -358,9 +356,8 @@ public class CodeStrings {
 			}
 
 			/*
-			if (targetCase == 1 && str.charAt(i) >= 'A' && str.charAt(i) <= 'Z') {
-				out = out + str.charAt(i);
-			}
+			 * if (targetCase == 1 && str.charAt(i) >= 'A' && str.charAt(i) <= 'Z') { out =
+			 * out + str.charAt(i); }
 			 */
 
 			// converts to lower case
@@ -371,9 +368,8 @@ public class CodeStrings {
 			}
 
 			/*
-			if (targetCase == 2 && str.charAt(i) >= 'a' && str.charAt(i) <= 'z') {
-				out = out + str.charAt(i);
-			}
+			 * if (targetCase == 2 && str.charAt(i) >= 'a' && str.charAt(i) <= 'z') { out =
+			 * out + str.charAt(i); }
 			 */
 
 			if (isNoBlock) {
@@ -444,7 +440,7 @@ public class CodeStrings {
 	 */
 	public String removeChrInStr(String targetStr, char targetChr) {
 		String methodName = "removeChrInStr()";
-		System.out.println("::::::::::::::::::" + methodName + " method start::::::::::::::::::");	
+		System.out.println("::::::::::::::::::" + methodName + " method start::::::::::::::::::");
 
 		String out = "";
 
@@ -462,13 +458,14 @@ public class CodeStrings {
 		for (int i = 0; i < targetStr.length(); i++) {
 
 			// includes only character other than elimination character
-			if(positions.contains(i) == false) {
+			if (positions.contains(i) == false) {
 				out = out + targetStr.charAt(i);
 			}
 
 		}
 
-		System.out.println("Input string ==== " + targetStr + " , post eliminating character ==== " + targetChr + " , is " + out);
+		System.out.println(
+				"Input string ==== " + targetStr + " , post eliminating character ==== " + targetChr + " , is " + out);
 
 		System.out.println("::::::::::::::::::" + methodName + " method end::::::::::::::::::");
 		return out;
@@ -503,13 +500,13 @@ public class CodeStrings {
 		} while (isLoopContinued);
 
 		if (occurences.size() == 0) {
-			System.out.println("No occurences of character ==== " + targetChr + 
-					" in string ==== " + targetStr + " is found");
+			System.out.println(
+					"No occurences of character ==== " + targetChr + " in string ==== " + targetStr + " is found");
 		}
 
 		else {
-			System.out.println("Number of occurrences of character ==== " + targetChr 
-					+ " are ==== " + occurences.size());
+			System.out
+					.println("Number of occurrences of character ==== " + targetChr + " are ==== " + occurences.size());
 			System.out.println("Occurrences of character ==== " + targetChr + " are :::: " + occurences);
 		}
 
@@ -520,10 +517,8 @@ public class CodeStrings {
 	/**
 	 * Checks the case type in input string
 	 *
-	 * caseCode :-
-	 * 	0 -> all are in lower case
-	 *  1 -> all are in upper case
-	 *  2 -> both upper & lower case
+	 * caseCode :- 0 -> all are in lower case 1 -> all are in upper case 2 -> both
+	 * upper & lower case
 	 */
 	public int findStrCase(String targetStr) {
 		String methodName = "findStrCase()";
@@ -584,7 +579,7 @@ public class CodeStrings {
 			while (targetString.indexOf(targetString.charAt(i)) != -1) {
 				noOfChars++;
 				i++;
-				//				System.out.println("i ==== " + i + " , noOfChars ==== " + noOfChars);
+				// System.out.println("i ==== " + i + " , noOfChars ==== " + noOfChars);
 			}
 		}
 
@@ -602,52 +597,52 @@ public class CodeStrings {
 		return noOfChars;
 	}
 
-	/**variantCharacter definition 
-	 * 0 -> vowels
-	 *  1 -> consonants
-	 *  2 -> numbers
-	 *  3 -> space
-	 *  4 -> special character
+	/**
+	 * variantCharacter definition 0 -> vowels 1 -> consonants 2 -> numbers 3 ->
+	 * space 4 -> special character
 	 */
 	public int[] chrTypeCounter(String targetStr) {
 		String methodName = "findStrCase()";
 		System.out.println("::::::::::::::::::" + methodName + " method start::::::::::::::::::");
-		int[] variantCount = {0, 0, 0, 0, 0};
+		int[] variantCount = { 0, 0, 0, 0, 0 };
 
 		boolean isVowel = false;
 
 		for (int i = 0; i < targetStr.length(); i++) {
 
-			if (targetStr.charAt(i) == 'a' || targetStr.charAt(i) == 'A'
-					||	targetStr.charAt(i) == 'e' || targetStr.charAt(i) == 'E'
-					||	targetStr.charAt(i) == 'i' || targetStr.charAt(i) == 'I'
-					||	targetStr.charAt(i) == 'o' || targetStr.charAt(i) == 'O'
-					||	targetStr.charAt(i) == 'u' || targetStr.charAt(i) == 'U') {
+			if (targetStr.charAt(i) == 'a' || targetStr.charAt(i) == 'A' || targetStr.charAt(i) == 'e'
+					|| targetStr.charAt(i) == 'E' || targetStr.charAt(i) == 'i' || targetStr.charAt(i) == 'I'
+					|| targetStr.charAt(i) == 'o' || targetStr.charAt(i) == 'O' || targetStr.charAt(i) == 'u'
+					|| targetStr.charAt(i) == 'U') {
 				variantCount[0]++;
-				//				System.out.println("i ==== " + i + ", character ==== " + targetStr.charAt(i) + " is vowel");
+				// System.out.println("i ==== " + i + ", character ==== " + targetStr.charAt(i)
+				// + " is vowel");
 				isVowel = true;
 			}
 
 			else if (!isVowel && Character.isAlphabetic(targetStr.charAt(i))) {
 				variantCount[1]++;
-				//				System.out.println("i ==== " + i + ", character ==== " + targetStr.charAt(i) + " is consonants");
+				// System.out.println("i ==== " + i + ", character ==== " + targetStr.charAt(i)
+				// + " is consonants");
 			}
 
 			else if (Character.isDigit(targetStr.charAt(i))) {
 				variantCount[2]++;
-				//				System.out.println("i ==== " + i + ", character ==== " + targetStr.charAt(i) + " is digit");
+				// System.out.println("i ==== " + i + ", character ==== " + targetStr.charAt(i)
+				// + " is digit");
 			}
-
 
 			else if (targetStr.charAt(i) == ' ') {
 				variantCount[3]++;
-				//				System.out.println("i ==== " + i + ", character ==== " + targetStr.charAt(i) + " is space");
+				// System.out.println("i ==== " + i + ", character ==== " + targetStr.charAt(i)
+				// + " is space");
 
 			}
 
 			else {
 				variantCount[4]++;
-				//				System.out.println("i ==== " + i + ", character ==== " + targetStr.charAt(i) + " is special character");
+				// System.out.println("i ==== " + i + ", character ==== " + targetStr.charAt(i)
+				// + " is special character");
 			}
 			isVowel = false;
 		}
@@ -659,25 +654,33 @@ public class CodeStrings {
 		System.out.println("Number of Spaces            ==== " + variantCount[3]);
 		System.out.println("Number of Special Character ==== " + variantCount[4]);
 
-
 		System.out.println("::::::::::::::::::" + methodName + " method end::::::::::::::::::");
 		return variantCount;
 	}
 
-	public int countNoOfWords(String sentence) {
-		String methodName = "countNoOfWords()";
+	public int findNoOfWords(String sentence) {
+		String methodName = "findNoOfWords()";
 		System.out.println("::::::::::::::::::" + methodName + " method start::::::::::::::::::");
 
 		int noOfWords = 0;
 
-		boolean isSpaceFound = false;
-		/*
-		 * for (int i = 0; i < sentence.length(); i++) { if (sentence.charAt(i) == ' '
-		 * || sentence.charAt(i) == '/t' && !isSpaceFound) { noOfWords } }
-		 */
+		sentence = sentence.trim();
+
+		for (int i = 0; i < sentence.length(); i++) {
+			if ((sentence.charAt(i) == ' ' && sentence.charAt(i + 1) != ' ' && sentence.charAt(i + 1) != '	')
+					|| (sentence.charAt(i) == '	' && sentence.charAt(i + 1) != '	')
+							&& sentence.charAt(i + 1) != ' ') {
+//				System.out.println("i ==== " + i + " sentence.charAt(i) ===== " + noOfWords + "");
+				noOfWords = noOfWords + 1;
+			}
+		}
+
+		noOfWords = noOfWords + 1;
+
+		System.out.println("Number of words in input string ==== '" + sentence + "' Is " + noOfWords);
 
 		System.out.println("::::::::::::::::::" + methodName + " method end::::::::::::::::::");
-		return 0;
+		return noOfWords;
 	}
 
 	public String convertStrArrToStr(String[] target) {
@@ -694,7 +697,9 @@ public class CodeStrings {
 		return str;
 	}
 
-	/**Finds the non - repeating characters in the string
+	/**
+	 * Finds the non - repeating characters in the string
+	 * 
 	 * @param inputStr
 	 * @return
 	 */
@@ -710,26 +715,28 @@ public class CodeStrings {
 
 			isUnique = true;
 
-			for(int j = 0; j < inputStr.length(); j++) {
+			for (int j = 0; j < inputStr.length(); j++) {
 
-				if(inputStr.charAt(i) == inputStr.charAt(j) && i != j) {
+				if (inputStr.charAt(i) == inputStr.charAt(j) && i != j) {
 					isUnique = false;
 				}
 
 			}
 
-			if(isUnique) {
+			if (isUnique) {
 				System.out.println("Unique character ====" + inputStr.charAt(i));
 				uniqueChr = uniqueChr + inputStr.charAt(i);
 			}
 
-		} 
+		}
 
 		System.out.println("::::::::::::::::::" + methodName + " method end::::::::::::::::::");
 		return uniqueChr;
 	}
 
-	/**Removes junk characters from the string
+	/**
+	 * Removes junk characters from the string
+	 * 
 	 * @param inputStr
 	 * @return
 	 */
@@ -741,38 +748,32 @@ public class CodeStrings {
 
 		filteredStr = inputStr.replaceAll("[^a-zA-Z0-9]", "");
 
-
-		/* start ziya
-		for (int i = 0; i < inputStr.length(); i++) {
-
-		String filteredStr = "";
-		String junkStr = "";
-
-			// if (Character.isLetter(inputStr.charAt(i))) {\
-			if ((inputStr.charAt(i) >= 'A' && inputStr.charAt(i) <= 'Z')
-					|| (inputStr.charAt(i) >= 'a' && inputStr.charAt(i) <= 'z')) {
-				filteredStr = filteredStr + inputStr.charAt(i);
-				// System.out.println("chr ==== " + inputStr.charAt(i) + " at position i ==== "
-				// + i +" is alphabetic");
-			}
-
-			else if (inputStr.charAt(i) >= '0' && inputStr.charAt(i) <= '9') {
-				filteredStr = filteredStr + inputStr.charAt(i);
-				// System.out.println("chr ==== " + inputStr.charAt(i) + " at position i ==== "
-				// + i +" is digit");
-			}
-
-			else {
-				junkStr = junkStr + inputStr.charAt(i);
-				// System.out.println("chr ==== " + inputStr.charAt(i) + " at position i ==== "
-				// + i +" is neither alphabet nor digit");
-			}
-
-		}*/ // end ziya
+		/*
+		 * start ziya for (int i = 0; i < inputStr.length(); i++) {
+		 * 
+		 * String filteredStr = ""; String junkStr = "";
+		 * 
+		 * // if (Character.isLetter(inputStr.charAt(i))) {\ if ((inputStr.charAt(i) >=
+		 * 'A' && inputStr.charAt(i) <= 'Z') || (inputStr.charAt(i) >= 'a' &&
+		 * inputStr.charAt(i) <= 'z')) { filteredStr = filteredStr + inputStr.charAt(i);
+		 * // System.out.println("chr ==== " + inputStr.charAt(i) +
+		 * " at position i ==== " // + i +" is alphabetic"); }
+		 * 
+		 * else if (inputStr.charAt(i) >= '0' && inputStr.charAt(i) <= '9') {
+		 * filteredStr = filteredStr + inputStr.charAt(i); //
+		 * System.out.println("chr ==== " + inputStr.charAt(i) + " at position i ==== "
+		 * // + i +" is digit"); }
+		 * 
+		 * else { junkStr = junkStr + inputStr.charAt(i); //
+		 * System.out.println("chr ==== " + inputStr.charAt(i) + " at position i ==== "
+		 * // + i +" is neither alphabet nor digit"); }
+		 * 
+		 * }
+		 */ // end ziya
 
 		System.out.println("Given String ===== " + inputStr);
 		System.out.println("Filtered String ===== " + filteredStr);
-//		System.out.println("Junk String ===== " + junkStr);
+		// System.out.println("Junk String ===== " + junkStr);
 
 		System.out.println("::::::::::::::::::" + methodName + " method end::::::::::::::::::");
 		return filteredStr;

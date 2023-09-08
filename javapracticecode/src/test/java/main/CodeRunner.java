@@ -1,17 +1,14 @@
 package main;
 
-import java.util.Arrays;
 import java.util.Scanner;
 import java.util.TreeMap;
 import java.util.TreeSet;
 
 import edu.arrays.Algos;
 import edu.arrays.CodeArray;
-import edu.challenges.Subho;
-import edu.collections.CodeCollections;
 import edu.company.interviews.NykaRound1;
+import edu.date.and.time.DateClass;
 import edu.numbers.Numbers;
-import edu.patternprogramming.Square;
 import edu.patternprogramming.StarPatterns;
 import edu.strings.CodeStrings;
 import edu.strings.StringUtil;
@@ -78,6 +75,7 @@ public class CodeRunner {
 		CodeArray codeArr = new CodeArray();
 		StringUtil strUtil = new StringUtil();
 		StarPatterns	sqPattern = new StarPatterns();
+		DateClass dateClass = new DateClass();
 
 		TreeSet<Character> dupChrResult = new TreeSet<Character>();
 		TreeMap<Character, Integer> dupChrCount = new TreeMap<Character, Integer>();
@@ -305,6 +303,11 @@ public class CodeRunner {
 		int[] num_2 = numbi.getSeries();
 		codeArr.arrayIntersection(num_1, num_2);
 		 */
+		
+		// to find number of words in a sentence
+		System.out.println("Enter the sentence whose number of words to be counted");
+		str = scanner.nextLine();
+		codeStr.findNoOfWords(str);
 
 		/*
 		// to find duplicate elements
@@ -338,9 +341,11 @@ public class CodeRunner {
 		Square.rowWiseAscending(sqSize);
 		*/
 		
+		/*
 		System.out.println("Enter the size of column descending square ::::: ");
 		sqSize = scanner.nextInt();
 		Square.columnWiseDescending(sqSize);
+		*/
 		
 		/*
 		System.out.println("Enter the string whose upper case letter & words starting in upper case ::::: ");
@@ -348,6 +353,17 @@ public class CodeRunner {
 		Subho.findUpperAlpAndWords(inputStr);
 		*/
 		
+		/*
+		// start : date & time programs 
+		System.out.println("Enter the year for leap year for validation");
+		int yr = scanner.nextInt();
+		DateClass.validateLeapYear(yr);
+		*/
+		
+		/*
+		DateClass.testMethod();
+		// end : date & time programs 
+		*/
 		System.out.println("::::::::::::::: Exit :::::::::::::::");
 	}
 }
