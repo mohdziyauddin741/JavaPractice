@@ -294,6 +294,13 @@ public class CodeRunner {
 		 */
 
 		/*
+		// find number of letters in the string
+		System.out.println("Enter the string in which number of letters to be finded");
+		str = scanner.nextLine();
+		CodeStrings.findNumberOfLetters(str);
+		 */
+		
+		/*
 		// to remove junk characters from the string
 		strResult = codeStr.removeUnwantedChrInStr("世界您好!Ziおねがいします。YA123");
 		 */
@@ -354,36 +361,36 @@ public class CodeRunner {
 		sqSize = scanner.nextInt();
 		Square.rowWiseDescending(sqSize);
 		 */
-		
+
 		/*
 		System.out.println("Enter the size of number square ::::: ");
 		sqSize = scanner.nextInt();
 		Square.sqaureNumber(sqSize);
 		 */
-		
+
 		/*
 		System.out.println("Enter the size of odd number square ::::: ");
 		sqSize = scanner.nextInt();
 		Square.oddNumbersSquare(sqSize);
 		 */
-		
+
 		/*
 		System.out.println("Enter the size of even number square ::::: ");
 		sqSize = scanner.nextInt();
 		Square.evenNumbersSquare(sqSize);
 		 */
-		
+
 		/*
 		System.out.println("Enter the numbers of rows in square ::::: ");
 		sqSize = scanner.nextInt();
 		Square.rowWiseTables(sqSize);
 		 */
-		
-//		/*
+
+		/*
 		System.out.println("Enter the numbers of rows in square ::::: ");
 		sqSize = scanner.nextInt();
 		Square.changingColumnSqare(sqSize);
-//		 */
+		 */
 
 		/*
 		System.out.println("Enter the string whose upper case letter & words starting in upper case ::::: ");
@@ -391,12 +398,12 @@ public class CodeRunner {
 		Subho.findUpperAlpAndWords(inputStr);
 		 */
 
-		/*
+		//		/*
 		// start : date & time programs 
 		System.out.println("Enter the year for leap year for validation");
 		int yr = scanner.nextInt();
 		DateClass.validateLeapYear(yr);
-		 */
+		//		 */
 
 		/*
 		DateClass.testMethod();

@@ -314,7 +314,7 @@ public class CodeStrings {
 		}
 
 		System.out
-				.println("Input string ==== " + str + " , without dublicate characters are ==== " + strNoDuplicateChr);
+		.println("Input string ==== " + str + " , without dublicate characters are ==== " + strNoDuplicateChr);
 
 		System.out.println("::::::::::::::::::" + methodName + " method end::::::::::::::::::");
 		return strNoDuplicateChr;
@@ -506,7 +506,7 @@ public class CodeStrings {
 
 		else {
 			System.out
-					.println("Number of occurrences of character ==== " + targetChr + " are ==== " + occurences.size());
+			.println("Number of occurrences of character ==== " + targetChr + " are ==== " + occurences.size());
 			System.out.println("Occurrences of character ==== " + targetChr + " are :::: " + occurences);
 		}
 
@@ -669,8 +669,8 @@ public class CodeStrings {
 		for (int i = 0; i < sentence.length(); i++) {
 			if ((sentence.charAt(i) == ' ' && sentence.charAt(i + 1) != ' ' && sentence.charAt(i + 1) != '	')
 					|| (sentence.charAt(i) == '	' && sentence.charAt(i + 1) != '	')
-							&& sentence.charAt(i + 1) != ' ') {
-//				System.out.println("i ==== " + i + " sentence.charAt(i) ===== " + noOfWords + "");
+					&& sentence.charAt(i + 1) != ' ') {
+				//				System.out.println("i ==== " + i + " sentence.charAt(i) ===== " + noOfWords + "");
 				noOfWords = noOfWords + 1;
 			}
 		}
@@ -777,6 +777,32 @@ public class CodeStrings {
 
 		System.out.println("::::::::::::::::::" + methodName + " method end::::::::::::::::::");
 		return filteredStr;
+	}
+
+	/**Finds the number of letters in a string
+	 * @param inputString : string on which number of letters to be counted
+	 * @return
+	 */
+	public static int findNumberOfLetters(String inputString) {
+		String methodName = "findNumberOfLetters()";
+		System.out.println("::::::::::::::::::" + methodName + " method start::::::::::::::::::");
+
+		int noOfLetters = 0;
+
+		int i = 0;
+		while(i != inputString.length()) {
+
+			if (inputString.charAt(i) != -1 && inputString.charAt(i) != ' ' && inputString.charAt(i) != '	') {
+				noOfLetters++;
+			}
+
+			i++;
+		}
+
+		System.out.println("Number of characters in input string ==== '" + inputString + "' is " + noOfLetters);
+		
+		System.out.println("::::::::::::::::::" + methodName + " method end::::::::::::::::::");
+		return noOfLetters;
 	}
 
 }

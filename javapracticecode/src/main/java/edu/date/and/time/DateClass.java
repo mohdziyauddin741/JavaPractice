@@ -9,11 +9,11 @@ public class DateClass {
 		System.out.println(":::::::::::::::::::Start of Method " + methodName + ":::::::::::::::::::");
 		boolean isLeapYear = false;
 
-		System.out.println("year % 4 == " + year % 4);
-		System.out.println("year % 100 == " + year % 100);
-		System.out.println("year % 400 == " + year % 400);
+		// System.out.println("year % 4 == " + year % 4);
+		// System.out.println("year % 100 == " + year % 100);
+		// System.out.println("year % 400 == " + year % 400);
 
-		if (year % 4 == 0 && year % 100 != 0 && year % 400 == 0) {
+		if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
 			isLeapYear = true;
 		}
 
