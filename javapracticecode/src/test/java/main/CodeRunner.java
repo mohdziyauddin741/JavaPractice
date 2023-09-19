@@ -9,6 +9,7 @@ import edu.arrays.CodeArray;
 import edu.company.interviews.NykaRound1;
 import edu.date.and.time.DateClass;
 import edu.numbers.Numbers;
+import edu.patternprogramming.Square;
 import edu.patternprogramming.StarPatterns;
 import edu.strings.CodeStrings;
 import edu.strings.StringUtil;
@@ -25,7 +26,7 @@ public class CodeRunner {
 		String[] strArr = null;
 		// String str = "Myth";
 		String str = "";
-				String inputStr = "";
+		String inputStr = "";
 		//		String outputStr = "";
 		//		String sentence = "";
 		//		String revSentResult = "";
@@ -303,12 +304,13 @@ public class CodeRunner {
 		int[] num_2 = numbi.getSeries();
 		codeArr.arrayIntersection(num_1, num_2);
 		 */
-		
+
+		/*
 		// to find number of words in a sentence
 		System.out.println("Enter the sentence whose number of words to be counted");
 		str = scanner.nextLine();
 		codeStr.findNoOfWords(str);
-
+		 */
 		/*
 		// to find duplicate elements
 		int[] num_1 = numbi.getSeries();
@@ -322,48 +324,84 @@ public class CodeRunner {
 		squarePatterInput = scanner.nextInt();
 		sqPattern.hollowSquarePattern(squarePatterInput);
 		 */
-		
+
 		/*
 		System.out.println("Enter the size of square ::::: ");
 		sqSize = scanner.nextInt();
 		Square.starSquared(sqSize);
-		*/
-		
+		 */
+
 		/*
 		System.out.println("Enter the size of columnwise ascending square ::::: ");
 		sqSize = scanner.nextInt();
 		Square.columnWiseAscending(sqSize);
-		*/
-		
+		 */
+
 		/*
 		System.out.println("Enter the size of rowwise ascending square ::::: ");
 		sqSize = scanner.nextInt();
 		Square.rowWiseAscending(sqSize);
-		*/
-		
+		 */
+
 		/*
 		System.out.println("Enter the size of column descending square ::::: ");
 		sqSize = scanner.nextInt();
 		Square.columnWiseDescending(sqSize);
-		*/
+		 */
+
+		/*
+		System.out.println("Enter the size of row wise descending square ::::: ");
+		sqSize = scanner.nextInt();
+		Square.rowWiseDescending(sqSize);
+		 */
 		
+		/*
+		System.out.println("Enter the size of number square ::::: ");
+		sqSize = scanner.nextInt();
+		Square.sqaureNumber(sqSize);
+		 */
+		
+		/*
+		System.out.println("Enter the size of odd number square ::::: ");
+		sqSize = scanner.nextInt();
+		Square.oddNumbersSquare(sqSize);
+		 */
+		
+		/*
+		System.out.println("Enter the size of even number square ::::: ");
+		sqSize = scanner.nextInt();
+		Square.evenNumbersSquare(sqSize);
+		 */
+		
+		/*
+		System.out.println("Enter the numbers of rows in square ::::: ");
+		sqSize = scanner.nextInt();
+		Square.rowWiseTables(sqSize);
+		 */
+		
+//		/*
+		System.out.println("Enter the numbers of rows in square ::::: ");
+		sqSize = scanner.nextInt();
+		Square.changingColumnSqare(sqSize);
+//		 */
+
 		/*
 		System.out.println("Enter the string whose upper case letter & words starting in upper case ::::: ");
 		inputStr = scanner.nextLine();
 		Subho.findUpperAlpAndWords(inputStr);
-		*/
-		
+		 */
+
 		/*
 		// start : date & time programs 
 		System.out.println("Enter the year for leap year for validation");
 		int yr = scanner.nextInt();
 		DateClass.validateLeapYear(yr);
-		*/
-		
+		 */
+
 		/*
 		DateClass.testMethod();
 		// end : date & time programs 
-		*/
+		 */
 		System.out.println("::::::::::::::: Exit :::::::::::::::");
 	}
 }
